@@ -1,8 +1,26 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Home from './pages/Home';
+import Offers from './pages/Offers';
+import Profile from './pages/Profile';
+import SignIn from './pages/SignIn';
+import SignUp from './pages/SignUp';
+import ForgotPassword from './pages/ForgotPassword';
 
 function App() {
   return (
     <>
-<h1>Hello Worlde</h1>
+<Router>
+  <Routes>
+    <Route path='/' element={<Home/>}/>
+    <Route path='/Profile' element={<Profile/>}/>
+    <Route path='/Sign-in' element={<SignIn/>}/>
+    <Route path='/Sign-up' element={<SignUp/>}/>
+    <Route path='/Forgot-password' element={<ForgotPassword/>}/>
+    <Route path='/Offers' element={<Offers/>}/>
+
+
+  </Routes>
+</Router>
     </>
   );
 }
